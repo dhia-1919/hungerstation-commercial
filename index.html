@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boolanga — Commercial Proposal — RFP-AMB-001</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B1D3A;--nvm:#122B52;--nvl:#1A3766;
+  --white:#FFF;--off:#F5F7FA;--g100:#E8ECF1;--g200:#D0D6E0;
+  --bl:#00C4CC;--bls:rgba(0,196,204,.10);--blb:rgba(0,196,204,.28);
+  --hs:#F5C518;--hss:rgba(245,197,24,.12);--hsb:rgba(245,197,24,.30);
+  --green:#16A34A;--gs:rgba(22,163,74,.09);--gb:rgba(22,163,74,.22);
+  --red:#DC2626;--rs:rgba(220,38,38,.08);
+  --txt:#0B1D3A;--txb:#374151;--txl:#4B5563;--txm:#6B7280;
+  --f:'Manrope',sans-serif;--mono:'Space Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);background:var(--white);color:var(--txt);-webkit-font-smoothing:antialiased;line-height:1.6}
+a{text-decoration:none}
+.slide{padding:80px 32px}
+.si{max-width:980px;margin:0 auto;width:100%}
+.tag{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:16px;display:block;color:#00C4CC}
+h2.sh{font-size:clamp(24px,3.8vw,38px);font-weight:800;line-height:1.1;margin:0 0 14px;letter-spacing:-.02em;color:#0B1D3A}
+.lead{font-size:15px;color:#4B5563;line-height:1.75;margin:0 0 32px;max-width:660px}
+/* Badge */
+.badge{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:.12em;padding:7px 16px;border-radius:7px}
+.badge--bl{background:#00C4CC;color:#0B1D3A}
+.badge--hs{background:#F5C518;color:#0B1D3A}
+.badge--sep{color:rgba(255,255,255,.3);font-size:18px;line-height:1}
+/* Nav pills */
+.pill{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:8px 18px;border-radius:8px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:rgba(255,255,255,.65)}
+.pill:hover{background:rgba(255,255,255,.14);color:#fff}
+/* Callouts */
+.callout{border-radius:12px;padding:16px 20px}
+.c-bl{background:rgba(0,196,204,.10);border:1px solid rgba(0,196,204,.28)}
+.c-bl .c-t{color:#00C4CC}
+.c-hs{background:rgba(245,197,24,.12);border:1px solid rgba(245,197,24,.30)}
+.c-hs .c-t{color:#C49B0A}
+.c-good{background:var(--gs);border:1px solid var(--gb)}
+.c-good .c-t{color:#15803D}
+.c-t{font-size:13px;font-weight:700;margin-bottom:5px;color:#0B1D3A}
+.c-d{font-size:12.5px;color:#4B5563;line-height:1.65}
+/* Grid */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:640px){.g2{grid-template-columns:1fr}}
+/* Scope */
+.scope-mod{border:1px solid var(--g100);border-radius:14px;overflow:hidden;margin-bottom:8px}
+.scope-h{padding:12px 20px;display:flex;align-items:center;gap:12px}
+.scope-h--navy{background:#0B1D3A}
+.scope-h--teal{background:#00C4CC}
+.scope-letter{font-family:var(--mono);font-size:10px;font-weight:700;color:rgba(255,255,255,.5)}
+.scope-name{font-size:13px;font-weight:700;color:#fff}
+.scope-count{margin-left:auto;font-family:var(--mono);font-size:9px;color:rgba(255,255,255,.35)}
+.s-item{display:flex;align-items:flex-start;gap:10px;padding:9px 20px;border-top:1px solid var(--g100);font-size:12.5px;line-height:1.55;color:#374151}
+.s-item:first-child{border-top:none}
+.s-ck{color:var(--green);font-weight:700;flex-shrink:0;font-size:12px;margin-top:1px}
+.s-ck--teal{color:#00C4CC}
+.s-badge{margin-left:auto;flex-shrink:0;font-family:var(--mono);font-size:8px;font-weight:700;padding:3px 7px;border-radius:4px;background:rgba(0,196,204,.10);color:#00C4CC}
+/* KPI pillars */
+.kpi-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
+.kpi-p{background:var(--white);border:1px solid var(--g100);border-radius:12px;padding:18px}
+.kpi-p__pts{font-size:42px;font-weight:800;color:#00C4CC;line-height:1;font-family:var(--mono)}
+.kpi-p__name{font-size:10px;font-weight:700;color:#4B5563;text-transform:uppercase;letter-spacing:.06em;font-family:var(--mono);margin:5px 0 8px}
+.kpi-p__f{font-size:12px;color:#4B5563;line-height:1.6}
+/* Brackets */
+.bracket-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.bracket{flex:1 1 100px;border-radius:10px;padding:14px;text-align:center}
+.bracket__pts{font-family:var(--mono);font-size:8px;font-weight:700;letter-spacing:.06em;margin-bottom:3px}
+.bracket__name{font-size:11px;font-weight:800;margin-bottom:5px}
+.bracket__sar{font-size:18px;font-weight:800;font-family:var(--mono)}
+.b-plat{background:#FFFBEB;border:1px solid #FDE68A}.b-plat .bracket__pts{color:#D97706}.b-plat .bracket__name{color:#92400E}.b-plat .bracket__sar{color:#78350F}
+.b-gold{background:#FEFCE8;border:1px solid #FEF08A}.b-gold .bracket__pts{color:#CA8A04}.b-gold .bracket__name{color:#78350F}.b-gold .bracket__sar{color:#713F12}
+.b-silver{background:var(--off);border:1px solid var(--g100)}.b-silver .bracket__pts{color:#6B7280}.b-silver .bracket__name{color:#0B1D3A}.b-silver .bracket__sar{color:#0B1D3A}
+.b-bronze{background:#FFF7ED;border:1px solid #FED7AA}.b-bronze .bracket__pts{color:#C2410C}.b-bronze .bracket__name{color:#7C2D12}.b-bronze .bracket__sar{color:#7C2D12}
+.b-none{background:var(--rs);border:1px solid rgba(220,38,38,.15)}.b-none .bracket__pts{color:var(--red)}.b-none .bracket__name{color:var(--red)}
+/* Hosting + Terms grid */
+.auto-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+.h-card{background:var(--white);border:1px solid var(--g100);border-radius:12px;padding:18px}
+.h-card__icon{font-size:22px;margin-bottom:8px}
+.h-card__label{font-family:var(--mono);font-size:9px;font-weight:700;color:#4B5563;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
+.h-card__val{font-size:13px;font-weight:600;color:#0B1D3A;line-height:1.5}
+/* Not included */
+.not-item{display:flex;gap:8px;padding:10px 14px;background:var(--rs);border:1px solid rgba(220,38,38,.12);border-radius:8px;font-size:12.5px;color:#374151}
+.not-x{color:var(--red);font-weight:700;flex-shrink:0}
+/* Deductions row */
+.ded-row{display:flex;gap:20px;flex-wrap:wrap;font-size:12.5px;color:#4B5563}
+.ded-row span strong{color:#0B1D3A}
+@media print{.slide{padding:28px 20px}}
+</style>
+</head>
+<body>
+
+<!-- ═══ HERO ═══ -->
+<section class="slide" style="background:linear-gradient(155deg,#0B1D3A 0%,#122B52 55%,#1A3766 100%);min-height:100vh;display:flex;align-items:center">
+<div class="si">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:28px">
+    <div class="badge badge--bl">boolanga</div>
+    <span class="badge--sep">×</span>
+    <div class="badge badge--hs">hungerstation</div>
+  </div>
+  <div style="font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.2em;color:rgba(255,255,255,.4);margin-bottom:18px;text-transform:uppercase">RFP-AMB-001 · Volume B — Commercial · May 4, 2026</div>
+  <h1 style="font-size:clamp(32px,5.5vw,58px);font-weight:800;color:#fff;line-height:1.05;margin:0 0 16px;letter-spacing:-.03em">Ambassadors Program<br><span style="color:#F5C518">Commercial Proposal</span></h1>
+  <p style="font-size:16px;color:rgba(255,255,255,.55);margin-bottom:48px;max-width:560px;line-height:1.75">One monthly fee. No setup charge. Every module, every integration, AI bundled.</p>
+
+  <!-- Price hero -->
+  <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:40px 48px;display:inline-block;margin-bottom:40px;text-align:center;min-width:360px;position:relative;overflow:hidden">
+    <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#00C4CC,#F5C518)"></div>
+    <div style="font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.18em;color:rgba(255,255,255,.35);text-transform:uppercase;margin-bottom:14px">Monthly recurring fee — Best &amp; Final</div>
+    <div style="line-height:1;margin-bottom:10px">
+      <span style="font-size:36px;font-weight:800;color:#F5C518;vertical-align:super">€</span><span style="font-size:76px;font-weight:800;color:#F5C518;letter-spacing:-.04em">7,500</span>
+    </div>
+    <div style="font-family:var(--mono);font-size:11px;color:rgba(255,255,255,.3);letter-spacing:.12em">PER MONTH · INVOICED MONTHLY IN ADVANCE</div>
+    <div style="margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);font-size:12px;color:rgba(255,255,255,.28)">No setup fee &nbsp;·&nbsp; No one-time charge &nbsp;·&nbsp; No per-check fee &nbsp;·&nbsp; Year 1 total: €90,000</div>
+  </div>
+
+  <div style="display:flex;gap:8px;flex-wrap:wrap">
+    <a class="pill" href="#covered" style="text-decoration:none">What&apos;s Covered</a>
+    <a class="pill" href="#kpi" style="text-decoration:none">KPI Engine</a>
+    <a class="pill" href="#hosting" style="text-decoration:none">KSA Hosting</a>
+    <a class="pill" href="#terms" style="text-decoration:none">Terms</a>
+  </div>
+</div>
+</section>
+
+<!-- ═══ WHAT'S COVERED ═══ -->
+<section class="slide" style="background:var(--off);padding-top:80px;padding-bottom:80px" id="covered">
+<div class="si">
+  <span class="tag">What the €7,500/month covers</span>
+  <h2 class="sh">Everything delivered. Nothing charged separately.</h2>
+  <p class="lead">The monthly fee is all-inclusive. No setup fee, no development charge, no per-check fee.</p>
+
+  <div class="callout c-good" style="margin-bottom:24px">
+    <div class="c-t">★  AI module is bundled — no separate charge</div>
+    <div class="c-d">AI infrastructure, model maintenance, and retraining as HungerStation updates gear standards are inside the monthly fee. No AI line item, no usage cost at any point.</div>
+  </div>
+
+  <div class="scope-mod">
+    <div class="scope-h scope-h--teal"><span class="scope-letter">BUILD</span><span class="scope-name">Platform development — absorbed by Boolanga, delivered to HungerStation</span><span class="scope-count">32 items</span></div>
+    <div class="s-item"><span class="s-ck">✓</span>All 5 TSD modules: Ambassador App, Incident Response, Field Intelligence, KPI Engine, Crystal Audit</div>
+    <div class="s-item"><span class="s-ck">✓</span>AI visual compliance module — Steps 04/05/06 auto-scored from proof photo<span class="s-badge">AI</span></div>
+    <div class="s-item"><span class="s-ck">✓</span>8-step sequential compliance check with step-level validation and no-skip enforcement</div>
+    <div class="s-item"><span class="s-ck">✓</span>Live photo enforcement: camera-only, EXIF 60s, Laplacian blur, MD5 dedup, anti-screenshot</div>
+    <div class="s-item"><span class="s-ck">✓</span>GPS double-capture (photo + submit), KSA bounding box, impossible movement detection</div>
+    <div class="s-item"><span class="s-ck">✓</span>AES-256 offline storage — 200 checks, auto-sync, timestamps immutable after local save</div>
+    <div class="s-item"><span class="s-ck">✓</span>RiderCare bidirectional integration — live dispatch map, one-tap dispatch, 60s accept/decline</div>
+    <div class="s-item"><span class="s-ck">✓</span>L1/L2/L3 incident workflows, incident report forms, 15-minute SLA timer, push escalation ≤5s</div>
+    <div class="s-item"><span class="s-ck">✓</span>All 4 field intelligence forms: Voice of Rider, Vendor Issues, Street &amp; Field, Daily Log</div>
+    <div class="s-item"><span class="s-ck">✓</span>Automated 4-pillar KPI scoring engine — monthly calculation, zero manual intervention</div>
+    <div class="s-item"><span class="s-ck">✓</span>Deduction engine: SAR 4/missed check (auto); SAR 15/Crystal-confirmed invalid; SAR 0 minimum enforced</div>
+    <div class="s-item"><span class="s-ck">✓</span>Incentive bracket auto-assignment: Platinum / Gold / Silver / Bronze for ambassadors and Team Leaders</div>
+    <div class="s-item"><span class="s-ck">✓</span>Team Leader composite score — 60% team avg + 25% eligibility + 15% weekly reports. Formula hidden from TL.</div>
+    <div class="s-item"><span class="s-ck">✓</span>Crystal validation queue — batch approve/reject, 48-hour SLA, SAR 15 only on manual confirmation</div>
+    <div class="s-item"><span class="s-ck">✓</span>Fake check detection: GPS dedup, MD5, speed anomaly, sequential check duration, EXIF age</div>
+    <div class="s-item"><span class="s-ck">✓</span>Coaching call auto-task per violation with outcome logging and 24h auto-escalation to TL</div>
+    <div class="s-item"><span class="s-ck">✓</span>Ambassador, Team Leader, and HSS Management dashboards — hard API + DB access restrictions per role</div>
+    <div class="s-item"><span class="s-ck">✓</span>Data export to Excel (.xlsx) + Google Sheets API v4 — Admin and HSS Asst Manager only</div>
+    <div class="s-item"><span class="s-ck">✓</span>Incentive/deduction figures exportable to Excel/Sheets for HungerStation payroll team</div>
+    <div class="s-item"><span class="s-ck">✓</span>Full app UI/UX redesign — optimised for field use on mid-range Android and iOS devices</div>
+    <div class="s-item"><span class="s-ck">✓</span>Arabic RTL — full mobile app. Boolanga provides translations and implements RTL.</div>
+    <div class="s-item"><span class="s-ck">✓</span>5-role RBAC enforced at API and database level — cross-role access impossible at system level</div>
+    <div class="s-item"><span class="s-ck">✓</span>SSO with HungerStation IDP + 2FA mandatory for HSS Manager and Admin</div>
+    <div class="s-item"><span class="s-ck">✓</span>AES-256 at rest, TLS 1.3 in transit, signed photo URLs 1-hour expiry</div>
+    <div class="s-item"><span class="s-ck">✓</span>Immutable audit logs — 2-year retention, all submissions/edits/exports/deductions/overrides</div>
+    <div class="s-item"><span class="s-ck">✓</span>External pen test — all Critical/High resolved before go-live, report to HS CISO</div>
+    <div class="s-item"><span class="s-ck">✓</span>12 mandatory P0/P1 automated test cases validated before go-live</div>
+    <div class="s-item"><span class="s-ck">✓</span>WMS (Rooster) API — read-only, on-demand + 4-hour cache, offline fallback</div>
+    <div class="s-item"><span class="s-ck">✓</span>FMS API — real-time GPS feed for dispatch map, 30-second refresh</div>
+    <div class="s-item"><span class="s-ck">✓</span>Google Sheets API v4 — OAuth 2.0 service account, .xlsx fallback</div>
+    <div class="s-item"><span class="s-ck">✓</span>Phase 2 city configuration — Mecca, Medina, Eastern Province, Abha, Al Ahsa, QP — no re-engineering</div>
+    <div class="s-item"><span class="s-ck">✓</span>Training: 60 ambassadors, 2 Team Leaders, HSS management — proficiency test before go-live</div>
+    <div class="s-item"><span class="s-ck">✓</span>Performance: submission &lt;5s on 4G; dashboard &lt;3s; 3,600+ submissions/day capacity</div>
+  </div>
+
+  <div class="scope-mod">
+    <div class="scope-h" style="background:var(--navy)"><span class="scope-letter">OPEX</span><span class="scope-name">Ongoing operations — included monthly</span></div>
+    <div class="s-item"><span class="s-ck s-ck--teal">✓</span><strong>KSA-resident hosting</strong> — 100% KSA, PDPL + NDMO compliant, 99.5% uptime 06:00–02:00 KSA. Data Residency Attestation Letter before contract signature.</div>
+    <div class="s-item"><span class="s-ck s-ck--teal">✓</span><strong>AI inference infrastructure</strong> — HungerStation-dedicated GPU, model runs, retraining as HS gear standards change<span class="s-badge">AI</span></div>
+    <div class="s-item"><span class="s-ck s-ck--teal">✓</span><strong>Platform maintenance</strong> — Bug fixes, security patches, minor releases. No additional charge.</div>
+    <div class="s-item"><span class="s-ck s-ck--teal">✓</span><strong>Technical support</strong> — 4-hour response for critical issues · 24-hour for standard</div>
+    <div class="s-item"><span class="s-ck s-ck--teal">✓</span><strong>SLA monitoring</strong> — Uptime monitoring, alerting, and incident response for the full contract</div>
+    <div class="s-item"><span class="s-ck s-ck--teal">✓</span><strong>Account management</strong> — Dedicated Boolanga contact for the full duration</div>
+  </div>
+
+  <div style="margin-top:20px">
+    <div style="font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#6B7280;margin-bottom:10px">Not included</div>
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <div class="not-item"><span class="not-x">✗</span>Native iOS and Android apps — available as a Year 2 engagement</div>
+      <div class="not-item"><span class="not-x">✗</span>Direct HR/payroll API — deduction/incentive data exportable to Excel/Sheets for HS payroll</div>
+      <div class="not-item"><span class="not-x">✗</span>PDPL legal advisory — Boolanga provides KSA hosting certificate; legal consultation not included</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══ KPI ENGINE ═══ -->
+<section class="slide" id="kpi">
+<div class="si">
+  <span class="tag">Module D — KPI scoring engine</span>
+  <h2 class="sh">Fully automated. Every formula exactly as specified.</h2>
+  <p class="lead">Monthly KPI calculation, deductions, and incentive bracket assignment run automatically at month-end. Zero manual intervention. Overrides by HSS Asst Manager only — each generates an immutable audit log entry.</p>
+
+  <div class="kpi-grid">
+    <div class="kpi-p">
+      <div class="kpi-p__pts">50</div>
+      <div class="kpi-p__name">Checks Completed</div>
+      <div class="kpi-p__f">(Actual checks ÷ 1,560) × 50<br>Proportional · capped at 50 pts<br>Target: 60 checks/day × 26 days</div>
+    </div>
+    <div class="kpi-p">
+      <div class="kpi-p__pts">20</div>
+      <div class="kpi-p__name">Report Quality</div>
+      <div class="kpi-p__f">≥95% valid = 20 pts<br>Each 1% below 95% = −2 pts<br>Below 85% = 0 pts</div>
+    </div>
+    <div class="kpi-p">
+      <div class="kpi-p__pts">15</div>
+      <div class="kpi-p__name">Proactive Escalations</div>
+      <div class="kpi-p__f">2+ HSS-validated = 15 pts<br>1 validated = 8 pts<br>0 validated = 0 pts</div>
+    </div>
+    <div class="kpi-p">
+      <div class="kpi-p__pts">15</div>
+      <div class="kpi-p__name">Violation Detection</div>
+      <div class="kpi-p__f">5+ violations = 15 pts<br>3–4 = 10 pts · 1–2 = 5 pts<br>0 violations = 0 pts</div>
+    </div>
+  </div>
+
+  <div class="callout c-hs" style="margin-bottom:18px">
+    <div class="c-t">Deduction engine — automatic at month-end after Crystal audits complete</div>
+    <div class="ded-row">
+      <span><strong>Missed check:</strong> SAR 4/check — auto-deducted</span>
+      <span><strong>Invalid check (Crystal confirmed):</strong> SAR 15 — never on flag alone</span>
+      <span><strong>Vehicle incident:</strong> 30% base + 50% incentive, max 3 months, HR + Fleet required</span>
+      <span><strong>Minimum payout:</strong> SAR 0 — system enforced</span>
+    </div>
+  </div>
+
+  <div style="font-size:12px;font-weight:700;color:#4B5563;margin-bottom:12px;font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase">Incentive brackets — ambassador</div>
+  <div class="bracket-row">
+    <div class="bracket b-plat"><div class="bracket__pts">95–100 PTS</div><div class="bracket__name">PLATINUM</div><div class="bracket__sar">SAR 1,200</div></div>
+    <div class="bracket b-gold"><div class="bracket__pts">85–94 PTS</div><div class="bracket__name">GOLD</div><div class="bracket__sar">SAR 900</div></div>
+    <div class="bracket b-silver"><div class="bracket__pts">75–84 PTS</div><div class="bracket__name">SILVER</div><div class="bracket__sar">SAR 650</div></div>
+    <div class="bracket b-bronze"><div class="bracket__pts">65–74 PTS</div><div class="bracket__name">BRONZE</div><div class="bracket__sar">SAR 400</div></div>
+    <div class="bracket b-none"><div class="bracket__pts">&lt; 65 PTS</div><div class="bracket__name">NOT ELIGIBLE</div><div class="bracket__sar" style="font-size:12px;color:var(--red)">HR review</div></div>
+  </div>
+  <div style="background:var(--off);border-radius:12px;padding:16px 20px;font-size:12.5px;color:#4B5563;line-height:1.7">
+    <strong style="color:#0B1D3A">Team Leader brackets:</strong> Platinum SAR 1,800 · Gold SAR 1,400 · Silver SAR 1,000 · Bronze SAR 600 · Below 65: not eligible + HR review.<br>
+    <strong style="color:#0B1D3A">Team Leader composite:</strong> 60% team average KPI + 25% team eligibility rate (≥65 pts) + 15% weekly reports on time. TL read-only — formula inputs hidden from TL view.
+  </div>
+</div>
+</section>
+
+<!-- ═══ KSA HOSTING ═══ -->
+<section class="slide" style="background:var(--off);padding-top:80px;padding-bottom:80px" id="hosting">
+<div class="si">
+  <span class="tag">KSA data residency</span>
+  <h2 class="sh">All data inside KSA. Certificate before contract signature.</h2>
+  <p class="lead">All data — storage, processing, and backups — is physically hosted within the Kingdom of Saudi Arabia. A Data Residency Attestation Letter is available before signature with no lead time required.</p>
+  <div class="auto-grid">
+    <div class="h-card"><div class="h-card__icon">🇸🇦</div><div class="h-card__label">Data location</div><div class="h-card__val">100% inside KSA<br>All storage + processing</div></div>
+    <div class="h-card"><div class="h-card__icon">📋</div><div class="h-card__label">Hosting certificate</div><div class="h-card__val">Data Residency Attestation<br>Available pre-signature</div></div>
+    <div class="h-card"><div class="h-card__icon">✅</div><div class="h-card__label">Compliance</div><div class="h-card__val">PDPL compliant<br>NDMO compliant</div></div>
+    <div class="h-card"><div class="h-card__icon">⚡</div><div class="h-card__label">Uptime SLA</div><div class="h-card__val">99.5% availability<br>06:00–02:00 KSA daily</div></div>
+    <div class="h-card"><div class="h-card__icon">🔐</div><div class="h-card__label">Encryption</div><div class="h-card__val">AES-256 at rest<br>TLS 1.3 in transit</div></div>
+    <div class="h-card"><div class="h-card__icon">📸</div><div class="h-card__label">Photo storage</div><div class="h-card__val">Signed URLs 1-hr expiry<br>No predictable paths</div></div>
+    <div class="h-card"><div class="h-card__icon">💾</div><div class="h-card__label">Backups</div><div class="h-card__val">Daily automated<br>30-day retention, KSA only</div></div>
+    <div class="h-card"><div class="h-card__icon">🔧</div><div class="h-card__label">Maintenance</div><div class="h-card__val">Outside 02:00–06:00 KSA<br>48-hour advance notice</div></div>
+  </div>
+</div>
+</section>
+
+<!-- ═══ TERMS ═══ -->
+<section class="slide" id="terms">
+<div class="si">
+  <span class="tag">Contract terms</span>
+  <h2 class="sh">Proposed terms</h2>
+  <p class="lead">Standard 12-month SaaS engagement. Monthly fee starts from pilot go-live — HungerStation pays nothing until the platform is live.</p>
+  <div class="auto-grid">
+    <div class="h-card"><div class="h-card__label">Duration</div><div class="h-card__val">1 year (12 months)<br>Renewable annually</div></div>
+    <div class="h-card"><div class="h-card__label">Currency</div><div class="h-card__val">EUR<br>Invoiced monthly in advance</div></div>
+    <div class="h-card"><div class="h-card__label">Fee commencement</div><div class="h-card__val">From pilot go-live (Stage 1)<br>~Week 4 from signature</div></div>
+    <div class="h-card" style="border-color:var(--green);background:var(--gs)"><div class="h-card__label" style="color:#15803D">Setup fee</div><div class="h-card__val" style="color:#15803D">None<br>No one-time charge of any kind</div></div>
+    <div class="h-card"><div class="h-card__label">Support SLA</div><div class="h-card__val">4-hour response for critical<br>24-hour for standard</div></div>
+    <div class="h-card"><div class="h-card__label">Change requests</div><div class="h-card__val">Quoted within 5 business days<br>of written request</div></div>
+    <div class="h-card"><div class="h-card__label">Platform IP</div><div class="h-card__val">Owned by Boolanga / WYB<br>HS right of use during contract</div></div>
+    <div class="h-card"><div class="h-card__label">Data ownership</div><div class="h-card__val">HungerStation owns all data<br>PII deleted within 90 days of exit</div></div>
+    <div class="h-card"><div class="h-card__label">Governing law</div><div class="h-card__val">United Arab Emirates<br>Wear Your Brand FZC, UAQ</div></div>
+    <div class="h-card"><div class="h-card__label">Prior contract</div><div class="h-card__val">Contract Legal 24 (expired Dec 2025)<br>does not govern this engagement</div></div>
+  </div>
+</div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer style="background:#0B1D3A;padding:40px 32px;text-align:center">
+  <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:10px">
+    <div class="badge badge--bl">boolanga</div>
+    <span style="color:rgba(255,255,255,.3);font-size:16px">×</span>
+    <div class="badge badge--hs">hungerstation</div>
+  </div>
+  <div style="font-size:12px;color:rgba(255,255,255,.45)">Wear Your Brand FZC · hamdan@boolanga.com · boolanga.com</div>
+  <div style="font-size:11px;color:rgba(255,255,255,.3);margin-top:4px">CONFIDENTIAL — For HungerStation Procurement Use Only · RFP-AMB-001 · May 4, 2026</div>
+</footer>
+
+</body>
+</html>
